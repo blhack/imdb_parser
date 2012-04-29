@@ -1,0 +1,5 @@
+I hate IMDB's new website.  I go to a movie almost every weekend, meaning I use the site a lot, and I *still* have trouble just finding the showtimes for my local theater.
+
+This is just a really dumb beautifulsoup parser for IMDB.  Feed it a showtimes page, and it gives you back movie titles and showtimes.  My favorite theater, Harkins Tempe Marketplace is hardcoded, but got to IMDB to find the theater you want.
+
+Enjoy.
