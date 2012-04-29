@@ -1,0 +1,8 @@
+Add search function:
+	Give me your zip code, and I'll search IMDB for you
+
+IMDB user ratings:
+	I trust these a lot, so I should include them in the JSON
+
+Movie poster:
+	If we want to make things pretty.  This data is all on the page, it just isn't in a meaningful hierarchy.
