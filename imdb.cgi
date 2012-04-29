@@ -27,9 +27,15 @@ def find_showtimes(data):
 	for showtime in showtimes:
 		times.append(showtime.getText().split("|"))
 
+	movies = soup.findAll(itemprop="ratingValue");
+	ratings = []
+	for movie in movies:
+			rating = movie.getText()
+			ratings.append(rating)
+
 	showtimes = {}
 	for i in range(0,len(titles)-1):
-		showtimes[titles[i]] = times[i] 
+		showtimes[titles[i]] = {"title":titles[i],"times":times[i],"rating":ratings[i]}
 
 	showtimes["modified"] = time.time()
 

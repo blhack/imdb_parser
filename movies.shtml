@@ -1,0 +1,34 @@
+<html>
+<head>
+<!--#include virtual="/assets/header.head" -->
+
+<script type=text/javascript>
+
+function set(data) {
+	movies = data;
+	for (var movie in movies) {
+		if (movie != "modified") {
+			console.log(movies[movie]);
+			$("#movies").append(vsprintf("<h1>%s</h1>", [movies[movie]["title"]]));
+			$("#movies").append(vsprintf("Rating: %s <br />", [movies[movie]["rating"]]));
+			$("#movies").append(movies[movie]["times"].join(" - "));
+			}
+		}
+	}
+
+function init() {
+	load_json("http://thingist.com/labs/imdb.cgi");
+	}
+
+</script>
+
+</head>
+
+<body onload="init();">
+<div id="movies">
+</div>
+
+</body>
+
+</html>
+	
